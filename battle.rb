@@ -50,13 +50,9 @@ class Yourclass
     #Code Starts Here!!!
 
 
-    games_played = record.length
-    if games_played.even?
-      answer = false
-    else
-      answer = true
-    end
-    answer
+
+
+
 
     #Code Ends Here!!!
   end
@@ -65,17 +61,21 @@ end
 
 
 def fight
+
+  #-------Enter combatants!------
   player_one = Yourclass.new
   player_two = Devil.new
+  #------------------------------
+
   player_one_record = []
   player_two_record = []
   round = 0
 
   # Scoring!
-  cooperate_score = -100
-  defect_score = -500
-  win_score = 0
-  lose_score = -1000
+  cooperate_score = 3
+  defect_score = -4
+  win_score = 7
+  lose_score = -1
 
   while round < 100
 
