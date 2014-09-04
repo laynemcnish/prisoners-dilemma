@@ -43,19 +43,22 @@ class Yourclass
   end
 
   def name
-    "Name"
+    "Layne"
   end
 
   def choice(record, cooperate_score, defect_score, win_score, lose_score)
-    #Code Starts Here!!!
+    cooperate = true
 
-
-
-
-
-
-    #Code Ends Here!!!
+    if record.length == 0
+      cooperate = true
+    elsif (record.last == defect_score) || (record.last == lose_score)
+      cooperate = false
+    elsif record.length % 10 != 0
+      cooperate = false
+    end
+    cooperate
   end
+
 end
 
 
@@ -72,9 +75,9 @@ def fight
   round = 0
 
   # Scoring!
-  cooperate_score = 3
-  defect_score = -4
-  win_score = 7
+  cooperate_score = 6
+  defect_score = -17
+  win_score = 3
   lose_score = -1
 
   while round < 100
@@ -113,3 +116,4 @@ def fight
 end
 
 fight
+
